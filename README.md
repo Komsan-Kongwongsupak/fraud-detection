@@ -25,5 +25,12 @@ Here's how to run MLflow:
 1. Open the terminal.
 2. Check that the port 8080 in the localhost is empty.
 3. Enter the "mlflow" directory in this project.
-4. Start MLflow with this command: `mlflow server --host 127.0.0.1 --port 8080`
+4. Start MLflow with this command: 
+   ```
+   mlflow server \
+    --backend-store-uri sqlite:///mlflow.db \
+    --default-artifact-root ./mlartifacts \
+    --host 127.0.0.1 \
+    --port 8080
+   ```
 5. Press "Ctrl + C" to stop the server.
